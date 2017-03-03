@@ -1,6 +1,8 @@
 FROM alpine:3.5
 MAINTAINER Shaneen31
 
+RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+
 RUN apk update && \
     apk add bash less vim nginx ca-certificates git tzdata \
     php7-fpm php7-json php7-zlib php7-xml php7-pdo php7-phar php7-openssl php7-redis\
