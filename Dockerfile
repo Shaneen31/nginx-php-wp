@@ -20,6 +20,7 @@ RUN sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini && \
 
 ADD files/nginx.conf /etc/nginx/
 ADD files/php-fpm.conf /etc/php7/
+ADD files/custom-php.ini /etc/php7/conf.d/zzz_custom.ini
 ADD files/run.sh /
 RUN chmod +x /run.sh
 
